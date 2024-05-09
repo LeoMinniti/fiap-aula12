@@ -64,5 +64,11 @@
       </span>
   </div>
 
+  <h3>Two-way dataBinding</h3>
+
+  <input type="text"
+         [(ngModel)] = "nome"
+         #campoInputModel>
+  <p>Você digitou: {{ nome }}</p>
 
 </article>
