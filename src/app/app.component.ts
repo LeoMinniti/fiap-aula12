@@ -14,4 +14,25 @@ export class AppComponent {
   desabilitado: boolean = false;
 
   imageUrl: String = "http://lorempixel.com.br/200/200";
+
+  isMouseOver: boolean = false;
+  valorAtual: string = '';
+  valorSalvo: string = '';
+
+  botaoClicado() {
+    alert('Botão clicado!');
+    this.desabilitado = !this.desabilitado
+  }
+
+  onKeyUp(event: KeyboardEvent) {
+    this.valorAtual = event.key;
+  }
+
+  salvarValor(event: any) {
+    this.valorSalvo = event;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
+  }
 }
